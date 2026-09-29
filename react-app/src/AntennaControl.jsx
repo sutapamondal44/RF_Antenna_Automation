@@ -142,7 +142,7 @@ const AntennaControl = () => {
       const formData = new FormData();
       formData.append('file', imageBlob, 'meter.jpg');
       
-      const extractResponse = await fetch('https://antenna-ocr-api.onrender.com/extract-ocr', {
+      const extractResponse = await fetch('https://antenna-ocr-api-edob.onrender.com/extract-ocr', {
         method: 'POST',
         body: formData,
         signal: AbortSignal.timeout(80000) // 80s timeout allows Render to wake up
