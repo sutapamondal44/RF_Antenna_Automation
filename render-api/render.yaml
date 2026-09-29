@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: antenna-ocr-api
+    env: python
+    region: ohio
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.5
+      - key: PORT
+        value: 8000
